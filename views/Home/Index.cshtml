@@ -1,0 +1,49 @@
+@{
+    ViewData["Title"] = "Drive Logs";
+}
+
+<div>
+    <h2>Drive Logs</h2>
+    <div id="driveLogsContainer">
+        <!-- Drive logs will be loaded here -->
+    </div>
+    <button id="loadMoreButton">Load More</button>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            var pageNumber = 1;
+            const pageSize = 50;
+
+            function loadDriveLogs() {
+                $.ajax({
+                    url: '@Url.Action("FetchDriveLogs", "ExportView")',
+                    type: 'GET',
+                    data: { pageNumber: pageNumber, pageSize: pageSize },
+                    success: function (data) {
+                        var container = $('#driveLogsContainer');
+                        for (var i = 0; i < data.items.length; i++) {
+                            var logItem = $('<div>').text(data.items[i].description + ' - ' + new Date(data.items[i].logDate).toLocaleString());
+                            container.append(logItem);
+                        }
+
+                        if (!data.hasNextPage) {
+                            $('#loadMoreButton').hide();
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Error loading drive logs:', error);
+                    }
+                });
+            }
+
+            loadDriveLogs();
+
+            $('#loadMoreButton').click(function () {
+                pageNumber++;
+                loadDriveLogs();
+            });
+        });
+    </script>
+}
