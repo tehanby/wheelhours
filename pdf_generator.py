@@ -1,28 +1,40 @@
-import os
+import jinja2
 from fpdf import FPDF
 
 class PDFGenerator:
-    def generate_pdf(self, user_data):
+    def generate_pdf(self, data):
         """
-        Generates a PDF document based on the provided user data.
+        Generates a PDF document using the provided data.
         
         Args:
-        user_data (dict): A dictionary containing user data with keys 'name', 'email', and 'hours_worked'.
-        
+            data (dict): Data to be included in the PDF.
+            
         Returns:
-        str: The file path of the generated PDF.
+            bytes: Bytes object containing the PDF content.
         """
+        template_loader = jinja2.FileSystemLoader(searchpath="./")
+        template_env = jinja2.Environment(loader=template_loader)
+        template = template_env.get_template("template.html")
+
+        # Render the data into HTML
+        html_content = template.render(data=data)
+
+        # Convert HTML to PDF
         pdf = FPDF()
         pdf.add_page()
         pdf.set_font("Arial", size=12)
-        
-        # Adding a cell
-        pdf.cell(200, 10, txt=f"Name: {user_data['name']}", ln=True)
-        pdf.cell(200, 10, txt=f"Email: {user_data['email']}", ln=True)
-        pdf.cell(200, 10, txt=f"Hours Worked: {user_data['hours_worked']}", ln=True)
+        pdf.multi_cell(0, 10, txt=html_content, align='L')
+        return pdf.output(dest='S').encode('latin-1')
 
-        # Save the pdf with name .pdf
-        output_path = os.path.join(os.getcwd(), f"{user_data['name']}_{user_data['email']}.pdf")
-        pdf.output(output_path)
+# Example usage:
+if __name__ == "__main__":
+    data_service = DataService()
+    endpoint = "https://api.example.com/data"
+    data = data_service.fetch_data(endpoint)
+    
+    if data:
+        pdf_generator = PDFGenerator()
+        pdf_content = pdf_generator.generate_pdf(data)
         
-        return output_path
+        with open("output.pdf", "wb") as file:
+            file.write(pdf_content)
