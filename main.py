@@ -1,12 +1,13 @@
-from ui.supervisor_ui import root
+from .integration import Integration
 
-def on_first_open():
-    if not supervisor_exists():
-        root.mainloop()
-
-def supervisor_exists():
-    # Logic to check if supervisor data already exists (e.g., file or database)
-    return False
+def main():
+    integration = Integration()
+    
+    # Example usage
+    task_id = "12345"
+    integration.add_task(task_id, {"description": "Complete project report", "assignee": "John Doe"})
+    integration.integrate_supervisor_sign_off(task_id)
+    rejected = integration.reject_supervisor_sign_off(task_id)
 
 if __name__ == "__main__":
-    on_first_open()
+    main()
