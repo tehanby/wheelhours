@@ -1,0 +1,26 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .container {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 5px;
+    }
+}
