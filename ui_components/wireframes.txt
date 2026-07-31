@@ -1,0 +1,43 @@
+# Remote Web Portal Wireframes
+
+1. **Login Page**
+   - Username input field
+   - Password input field (with toggle for visibility)
+   - Remember me checkbox
+   - Login button
+   - Forgot password link
+   - Register new account link
+
+2. **Dashboard**
+   - Welcome message with user's name
+   - Overview section (current hours, remaining hours, projects in progress)
+   - Project list (clickable to open project page)
+     - Project name
+     - Total hours worked
+     - Status (in progress, completed)
+
+3. **Project Page**
+   - Project title
+   - Description
+   - Task list (clickable to open task details)
+     - Task title
+     - Estimated hours
+     - Hours logged
+   - Add new task button
+
+4. **Task Details**
+   - Task title
+   - Description
+   - Estimated hours
+   - Hours logged
+   - Log hours input field
+   - Submit hours button
+   - Cancel button
+
+5. **Settings**
+   - Profile settings (name, email)
+   - Password change options
+   - Notification preferences
+   - Logout button
+
+# Wireframes should be designed in a clean, modern style with a focus on usability and accessibility.
