@@ -1,14 +1,14 @@
-from django.shortcuts import render, redirect
-from .forms import SupervisorForm
+from django.shortcuts import get_object_or_404, redirect
+from .models import Task
 
-def add_supervisor(request):
-    if request.method == 'POST':
-        form = SupervisorForm(request.POST)
-        if form.is_valid():
-            supervisor = form.save(commit=False)
-            supervisor.save()
-            return redirect('supervisor_added_successfully')
-    else:
-        form = SupervisorForm()
+def approve_task(request, task_id):
+    task = get_object_or_404(Task, pk=task_id)
+    if request.user.is_superuser:
+        task.approve_task()
+    return redirect('task_list')
 
-    return render(request, 'add_supervisor.html', {'form': form})
+def reject_task(request, task_id):
+    task = get_object_or_404(Task, pk=task_id)
+    if request.user.is_superuser:
+        task.reject_task()
+    return redirect('task_list')
