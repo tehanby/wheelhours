@@ -6,14 +6,281 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3B234934301C181000BD3337 /* WheelHoursApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B234933301C181000BD3337 /* WheelHoursApp.swift */; };
+		3B234936301C181000BD3337 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B234935301C181000BD3337 /* ContentView.swift */; };
+		3B234938301C181200BD3337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B234937301C181200BD3337 /* Assets.xcassets */; };
+		3B2349B9301C1C3700BD3337 /* LocationTrackingService.java in Sources */ = {isa = PBXBuildFile; fileRef = 3B234993301C1C3700BD3337 /* LocationTrackingService.java */; };
+		3B2349BA301C1C3700BD3337 /* MainActivity.java in Sources */ = {isa = PBXBuildFile; fileRef = 3B234995301C1C3700BD3337 /* MainActivity.java */; };
+		3B2349D4301C1C3700BD3337 /* db_config.ini in Resources */ = {isa = PBXBuildFile; fileRef = 3B234990301C1C3700BD3337 /* db_config.ini */; };
+		3B2349D5301C1C3700BD3337 /* ExportView.js in Resources */ = {isa = PBXBuildFile; fileRef = 3B234991301C1C3700BD3337 /* ExportView.js */; };
+		3B2349D6301C1C3700BD3337 /* ExportView.py in Resources */ = {isa = PBXBuildFile; fileRef = 3B234992301C1C3700BD3337 /* ExportView.py */; };
+		3B2349D7301C1C3700BD3337 /* LocationTrackingServiceMathTests.cs in Resources */ = {isa = PBXBuildFile; fileRef = 3B234994301C1C3700BD3337 /* LocationTrackingServiceMathTests.cs */; };
+		3B2349D8301C1C3700BD3337 /* QueryOptimizer.py in Resources */ = {isa = PBXBuildFile; fileRef = 3B234996301C1C3700BD3337 /* QueryOptimizer.py */; };
+		3B2349D9301C1C3700BD3337 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3B234997301C1C3700BD3337 /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		3B234930301C181000BD3337 /* WheelHours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheelHours.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B234933301C181000BD3337 /* WheelHoursApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelHoursApp.swift; sourceTree = "<group>"; };
+		3B234935301C181000BD3337 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3B234937301C181200BD3337 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B234990301C1C3700BD3337 /* db_config.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = db_config.ini; sourceTree = "<group>"; };
+		3B234991301C1C3700BD3337 /* ExportView.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = ExportView.js; sourceTree = "<group>"; };
+		3B234992301C1C3700BD3337 /* ExportView.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = ExportView.py; sourceTree = "<group>"; };
+		3B234993301C1C3700BD3337 /* LocationTrackingService.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = LocationTrackingService.java; sourceTree = "<group>"; };
+		3B234994301C1C3700BD3337 /* LocationTrackingServiceMathTests.cs */ = {isa = PBXFileReference; lastKnownFileType = text; path = LocationTrackingServiceMathTests.cs; sourceTree = "<group>"; };
+		3B234995301C1C3700BD3337 /* MainActivity.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = MainActivity.java; sourceTree = "<group>"; };
+		3B234996301C1C3700BD3337 /* QueryOptimizer.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = QueryOptimizer.py; sourceTree = "<group>"; };
+		3B234997301C1C3700BD3337 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		3B234A66301C1FA800BD3337 /* Exceptions for "api" folder in "WheelHours" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"export-pdf.js",
+			);
+			target = 3B23492F301C181000BD3337 /* WheelHours */;
+		};
+		3B234A67301C1FA800BD3337 /* Exceptions for "Controllers" folder in "WheelHours" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				HomeController.cs,
+			);
+			target = 3B23492F301C181000BD3337 /* WheelHours */;
+		};
+		3B234A68301C1FA800BD3337 /* Exceptions for "Data" folder in "WheelHours" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				PaginatedList.cs,
+			);
+			target = 3B23492F301C181000BD3337 /* WheelHours */;
+		};
+		3B234A69301C1FA800BD3337 /* Exceptions for "Domain" folder in "WheelHours" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/DriveLog.swift,
+				Models/DriverProfile.swift,
+				Models/RoadCondition.swift,
+				Models/StateDMVPreset.swift,
+				Models/Supervisor.swift,
+				Models/Vehicle.swift,
+				Services/.gitkeep,
+				Services/ActiveDriveRecoveryService.swift,
+				Services/FreemiumGateService.swift,
+				Services/LocationTrackingService.swift,
+				Services/ManualEntryLogger.swift,
+				Services/PDFExportService.swift,
+				Services/StateDMVPresetEngine.swift,
+				Services/StoreKitService.swift,
+				Services/TimeCalculationService.swift,
+			);
+			target = 3B23492F301C181000BD3337 /* WheelHours */;
+		};
+		3B234A6A301C1FA800BD3337 /* Exceptions for "ManageSupervisorsVehiclesView" folder in "WheelHours" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				UI/App.js,
+				UI/Components/VehicleForm.jsx,
+				UI/Pages/ManageSupervisors.jsx,
+				UI/Pages/ManageSupervisorsVehicles.jsx,
+			);
+			target = 3B23492F301C181000BD3337 /* WheelHours */;
+		};
+		3B234A6B301C1FA800BD3337 /* Exceptions for "Models" folder in "WheelHours" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ApplicationDbContext.cs,
+				DriveLog.cs,
+				LogEntry.cs,
+			);
+			target = 3B23492F301C181000BD3337 /* WheelHours */;
+		};
+		3B234A6C301C1FA800BD3337 /* Exceptions for "PaywallView" folder in "WheelHours" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"iap-helper.js",
+				index.js,
+				purchase.js,
+			);
+			target = 3B23492F301C181000BD3337 /* WheelHours */;
+		};
+		3B234A6D301C1FA800BD3337 /* Exceptions for "Presentation" folder in "WheelHours" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Components/.gitkeep,
+				Components/MultiSelectTagView.swift,
+				Components/ProgressRingView.swift,
+				Components/SignatureCaptureView.swift,
+				Screens/.gitkeep,
+				Screens/DashboardView.swift,
+				Screens/DashboardViewModel.swift,
+				Screens/ExportView.swift,
+				Screens/ExportViewModel.swift,
+				Screens/ManageSupervisorsVehiclesView.swift,
+				Screens/ManualLogView.swift,
+				Screens/ManualLogViewModel.swift,
+				Screens/OnboardingView.swift,
+				Screens/OnboardingViewModel.swift,
+				Screens/PaywallView.swift,
+			);
+			target = 3B23492F301C181000BD3337 /* WheelHours */;
+		};
+		3B234A6E301C1FA800BD3337 /* Exceptions for "Resources" folder in "WheelHours" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				.gitkeep,
+				DriveTrack.storekit,
+			);
+			target = 3B23492F301C181000BD3337 /* WheelHours */;
+		};
+		3B234A6F301C1FA800BD3337 /* Exceptions for "Services" folder in "WheelHours" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Command.cs,
+			);
+			target = 3B23492F301C181000BD3337 /* WheelHours */;
+		};
+		3B234A70301C1FA800BD3337 /* Exceptions for "Tests" folder in "WheelHours" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DriveTrackTests/.gitkeep,
+				DriveTrackTests/ActiveDriveRecoveryServiceTests.swift,
+				DriveTrackTests/FreemiumGateServiceTests.swift,
+				DriveTrackTests/PDFExportServiceTests.swift,
+				DriveTrackTests/StateDMVPresetEngineTests.swift,
+				DriveTrackTests/TimeCalculationServiceTests.swift,
+				UnitTests/ExportViewModelTests.cs,
+			);
+			target = 3B23492F301C181000BD3337 /* WheelHours */;
+		};
+		3B234A71301C1FA800BD3337 /* Exceptions for "ViewModels" folder in "WheelHours" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				BaseViewModel.cs,
+				ManualLogViewModel.cs,
+			);
+			target = 3B23492F301C181000BD3337 /* WheelHours */;
+		};
+		3B234A72301C1FA800BD3337 /* Exceptions for "views" folder in "WheelHours" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ExportView.cs,
+				Home/Index.cshtml,
+			);
+			target = 3B23492F301C181000BD3337 /* WheelHours */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		3B234932301C181000BD3337 /* WheelHours */ = {
+		3B2349DB301C1FA800BD3337 /* api */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = WheelHours;
+			exceptions = (
+				3B234A66301C1FA800BD3337 /* Exceptions for "api" folder in "WheelHours" target */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		3B2349DD301C1FA800BD3337 /* App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = App;
+			sourceTree = "<group>";
+		};
+		3B2349DF301C1FA800BD3337 /* Controllers */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3B234A67301C1FA800BD3337 /* Exceptions for "Controllers" folder in "WheelHours" target */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3B2349E1301C1FA800BD3337 /* Data */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3B234A68301C1FA800BD3337 /* Exceptions for "Data" folder in "WheelHours" target */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3B2349F3301C1FA800BD3337 /* Domain */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3B234A69301C1FA800BD3337 /* Exceptions for "Domain" folder in "WheelHours" target */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		3B2349FB301C1FA800BD3337 /* ManageSupervisorsVehiclesView */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3B234A6A301C1FA800BD3337 /* Exceptions for "ManageSupervisorsVehiclesView" folder in "WheelHours" target */,
+			);
+			path = ManageSupervisorsVehiclesView;
+			sourceTree = "<group>";
+		};
+		3B2349FF301C1FA800BD3337 /* Models */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3B234A6B301C1FA800BD3337 /* Exceptions for "Models" folder in "WheelHours" target */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3B234A03301C1FA800BD3337 /* PaywallView */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3B234A6C301C1FA800BD3337 /* Exceptions for "PaywallView" folder in "WheelHours" target */,
+			);
+			path = PaywallView;
+			sourceTree = "<group>";
+		};
+		3B234A15301C1FA800BD3337 /* Presentation */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3B234A6D301C1FA800BD3337 /* Exceptions for "Presentation" folder in "WheelHours" target */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		3B234A18301C1FA800BD3337 /* Resources */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3B234A6E301C1FA800BD3337 /* Exceptions for "Resources" folder in "WheelHours" target */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3B234A1A301C1FA800BD3337 /* Services */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3B234A6F301C1FA800BD3337 /* Exceptions for "Services" folder in "WheelHours" target */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3B234A24301C1FA800BD3337 /* Tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3B234A70301C1FA800BD3337 /* Exceptions for "Tests" folder in "WheelHours" target */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		3B234A27301C1FA800BD3337 /* ViewModels */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3B234A71301C1FA800BD3337 /* Exceptions for "ViewModels" folder in "WheelHours" target */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3B234A2B301C1FA800BD3337 /* views */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3B234A72301C1FA800BD3337 /* Exceptions for "views" folder in "WheelHours" target */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,8 +299,32 @@
 		3B234927301C181000BD3337 = {
 			isa = PBXGroup;
 			children = (
-				3B234932301C181000BD3337 /* WheelHours */,
 				3B234931301C181000BD3337 /* Products */,
+				3B2349DB301C1FA800BD3337 /* api */,
+				3B2349DD301C1FA800BD3337 /* App */,
+				3B2349DF301C1FA800BD3337 /* Controllers */,
+				3B2349E1301C1FA800BD3337 /* Data */,
+				3B2349F3301C1FA800BD3337 /* Domain */,
+				3B2349FB301C1FA800BD3337 /* ManageSupervisorsVehiclesView */,
+				3B2349FF301C1FA800BD3337 /* Models */,
+				3B234A03301C1FA800BD3337 /* PaywallView */,
+				3B234A15301C1FA800BD3337 /* Presentation */,
+				3B234A18301C1FA800BD3337 /* Resources */,
+				3B234A1A301C1FA800BD3337 /* Services */,
+				3B234A24301C1FA800BD3337 /* Tests */,
+				3B234A27301C1FA800BD3337 /* ViewModels */,
+				3B234A2B301C1FA800BD3337 /* views */,
+				3B234937301C181200BD3337 /* Assets.xcassets */,
+				3B234935301C181000BD3337 /* ContentView.swift */,
+				3B234990301C1C3700BD3337 /* db_config.ini */,
+				3B234991301C1C3700BD3337 /* ExportView.js */,
+				3B234992301C1C3700BD3337 /* ExportView.py */,
+				3B234993301C1C3700BD3337 /* LocationTrackingService.java */,
+				3B234994301C1C3700BD3337 /* LocationTrackingServiceMathTests.cs */,
+				3B234995301C1C3700BD3337 /* MainActivity.java */,
+				3B234996301C1C3700BD3337 /* QueryOptimizer.py */,
+				3B234997301C1C3700BD3337 /* README.md */,
+				3B234933301C181000BD3337 /* WheelHoursApp.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,7 +352,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				3B234932301C181000BD3337 /* WheelHours */,
+				3B2349DD301C1FA800BD3337 /* App */,
 			);
 			name = WheelHours;
 			packageProductDependencies = (
@@ -109,6 +400,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B2349D4301C1C3700BD3337 /* db_config.ini in Resources */,
+				3B2349D5301C1C3700BD3337 /* ExportView.js in Resources */,
+				3B2349D6301C1C3700BD3337 /* ExportView.py in Resources */,
+				3B2349D7301C1C3700BD3337 /* LocationTrackingServiceMathTests.cs in Resources */,
+				3B2349D8301C1C3700BD3337 /* QueryOptimizer.py in Resources */,
+				3B2349D9301C1C3700BD3337 /* README.md in Resources */,
+				3B234938301C181200BD3337 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +417,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B2349B9301C1C3700BD3337 /* LocationTrackingService.java in Sources */,
+				3B2349BA301C1C3700BD3337 /* MainActivity.java in Sources */,
+				3B234936301C181000BD3337 /* ContentView.swift in Sources */,
+				3B234934301C181000BD3337 /* WheelHoursApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
