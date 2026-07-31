@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task List</title>
+</head>
+<body>
+    <h1>Tasks</h1>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task.title }} - {{ task.status }}
+                {% if request.user.is_superuser %}
+                    <a href="{% url 'approve_task' task.id %}">Approve</a> |
+                    <a href="{% url 'reject_task' task.id %}">Reject</a>
+                {% endif %}
+            </li>
+        {% empty %}
+            <li>No tasks available.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

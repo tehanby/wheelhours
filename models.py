@@ -1,8 +1,17 @@
 from django.db import models
 
-class Supervisor(models.Model):
-    name = models.CharField(max_length=100)
-    email = models.EmailField(unique=True)
+class Task(models.Model):
+    title = models.CharField(max_length=255)
+    description = models.TextField()
+    assigned_to = models.ForeignKey('auth.User', on_delete=models.SET_NULL, null=True)
+    status = models.CharField(max_length=10, choices=[('pending', 'Pending'), ('approved', 'Approved'), ('rejected', 'Rejected')], default='pending')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
-    def __str__(self):
-        return self.name
+    def approve_task(self):
+        self.status = 'approved'
+        self.save()
+
+    def reject_task(self):
+        self.status = 'rejected'
+        self.save()
