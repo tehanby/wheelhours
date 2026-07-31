@@ -2,7 +2,7 @@ import CoreLocation
 import SwiftUI
 import SwiftData
 
-/// DriveTrack's main hub screen: DMV-hours progress rings, a one-tap live
+/// WheelHours's main hub screen: DMV-hours progress rings, a one-tap live
 /// drive start/stop flow ("Active Drive Mode"), and a scrollable list of past
 /// drives.
 ///

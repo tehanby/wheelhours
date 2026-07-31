@@ -1,6 +1,6 @@
 import Foundation
 
-/// Pure business-logic gate for DriveTrack's freemium limits.
+/// Pure business-logic gate for WheelHours's freemium limits.
 ///
 /// Deliberately kept free of any `StoreKit`/`SwiftData` import so it can be unit
 /// tested without a real purchase flow or persistence stack — see
@@ -16,7 +16,7 @@ import Foundation
 /// button) should check `canLogOrExportDrive` before allowing the action, and
 /// may use `remainingFreeDrives` to render "3 free drives left" style copy.
 struct FreemiumGateService {
-    /// Default number of free drives DriveTrack allows before gating.
+    /// Default number of free drives WheelHours allows before gating.
     static let defaultFreeDriveLimit = 5
 
     /// Number of drives a non-unlocked user may log/export before being gated.

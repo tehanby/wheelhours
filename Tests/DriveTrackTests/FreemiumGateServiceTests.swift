@@ -1,5 +1,5 @@
 import XCTest
-@testable import DriveTrack
+@testable import WheelHours
 
 /// Unit tests for `FreemiumGateService`. Deliberately does not touch
 /// `StoreKitService` at all — that's the point of keeping the gating rule as a

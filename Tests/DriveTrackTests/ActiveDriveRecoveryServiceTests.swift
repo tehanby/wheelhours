@@ -1,6 +1,6 @@
 import XCTest
 import CoreLocation
-@testable import DriveTrack
+@testable import WheelHours
 
 // MARK: - ActiveDriveRecoveryService
 
@@ -8,7 +8,7 @@ final class ActiveDriveRecoveryServiceTests: XCTestCase {
 
     /// Dedicated suite so these tests never read or pollute the real app's
     /// `UserDefaults.standard`.
-    private let suiteName = "com.drivetrack.tests.ActiveDriveRecoveryServiceTests"
+    private let suiteName = "com.wheelhours.tests.ActiveDriveRecoveryServiceTests"
     private var testDefaults: UserDefaults!
     private var sut: ActiveDriveRecoveryService!
 

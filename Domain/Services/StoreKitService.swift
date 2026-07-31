@@ -15,7 +15,7 @@ enum StoreKitServiceError: Error {
     case failedVerification
 }
 
-/// Thin StoreKit 2 wrapper around DriveTrack's single non-consumable "lifetime
+/// Thin StoreKit 2 wrapper around WheelHours's single non-consumable "lifetime
 /// unlock" product.
 ///
 /// Kept deliberately separate from `FreemiumGateService`, which holds the actual
@@ -44,12 +44,12 @@ enum StoreKitServiceError: Error {
 @available(iOS 15, *)
 @MainActor
 final class StoreKitService: ObservableObject {
-    /// The single non-consumable "unlock everything" product DriveTrack sells.
-    /// Display name ("Unlock DriveTrack Lifetime") and price ($4.99 at time of
+    /// The single non-consumable "unlock everything" product WheelHours sells.
+    /// Display name ("Unlock WheelHours Lifetime") and price ($4.99 at time of
     /// writing) are configured in App Store Connect (and mirrored in the local
     /// `.storekit` config for Xcode testing) — this identifier is just the
     /// lookup key used by StoreKit APIs.
-    static let lifetimeUnlockProductID = "com.drivetrack.lifetime.unlock"
+    static let lifetimeUnlockProductID = "com.wheelhours.lifetime.unlock"
 
     /// Current known entitlement state for the lifetime unlock. Published so
     /// SwiftUI views/ViewModels can observe it directly. Kept in sync by

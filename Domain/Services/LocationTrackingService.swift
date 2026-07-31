@@ -175,7 +175,7 @@ final class LocationTrackingService: NSObject, LocationProvidingDelegate {
     /// a fresh fix overwrites it.
     private(set) var currentCoordinate: CLLocationCoordinate2D?
 
-    /// Cumulative trip distance in miles, for display (DriveTrack's DMV logs use miles).
+    /// Cumulative trip distance in miles, for display (WheelHours's DMV logs use miles).
     var cumulativeDistanceMiles: Double {
         cumulativeDistanceMeters / 1609.344
     }

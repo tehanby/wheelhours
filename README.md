@@ -1,6 +1,6 @@
-# DriveTrack
+# WheelHours
 
-DriveTrack is an offline-first native iOS app that helps teen drivers (and their
+WheelHours is an offline-first native iOS app that helps teen drivers (and their
 parents/supervisors) log supervised practice drives, track progress against their
 state's DMV permit-hours requirements, and export a signed log for the road test.
 
@@ -9,9 +9,9 @@ Built with SwiftUI + SwiftData, following an MVVM + Clean Architecture layering.
 ## Folder structure
 
 ```
-DriveTrack/
+WheelHours/
   App/
-    DriveTrackApp.swift        # @main entry point, ModelContainer setup, root view
+    WheelHoursApp.swift        # @main entry point, ModelContainer setup, root view
   Domain/
     Models/                    # SwiftData @Model entities + plain value types
       DriverProfile.swift
@@ -26,7 +26,7 @@ DriveTrack/
     Components/                # Reusable SwiftUI views (populated by later tasks)
   Resources/                   # Assets, plists, localized strings, etc.
   Tests/
-    DriveTrackTests/           # Unit/UI tests (populated by later tasks)
+    WheelHoursTests/           # Unit/UI tests (populated by later tasks)
   README.md
 ```
 
@@ -58,10 +58,10 @@ models that consume `Domain` services. `App` wires the two together at launch.
   exists. Hand-rolling an `.xcodeproj` file without Xcode available to verify it
   is risky and likely to produce a broken/unopenable project, so instead: on a
   Mac, create a new Xcode "App" project (SwiftUI interface, SwiftData for
-  storage) named `DriveTrack`, then drag the `App`, `Domain`, `Presentation`,
+  storage) named `WheelHours`, then drag the `App`, `Domain`, `Presentation`,
   `Resources`, and `Tests` folders from this repo into the project navigator
   (choosing "Create groups" and adding to the target, and adding
-  `Tests/DriveTrackTests` as a test target). Delete the placeholder
+  `Tests/WheelHoursTests` as a test target). Delete the placeholder
   `ContentView.swift`/`App.swift` Xcode generates in favor of the ones here.
 - **Code has not been compiled.** No Apple SDKs or Xcode are available in this
   environment, so none of this Swift code has been built or run. It was written

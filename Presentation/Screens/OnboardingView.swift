@@ -1,7 +1,7 @@
 import SwiftUI
 import SwiftData
 
-/// DriveTrack's zero-friction first-launch flow.
+/// WheelHours's zero-friction first-launch flow.
 ///
 /// This directly addresses the #1 complaint about competing driving-log apps:
 /// no sign-up, no email, no account, no "parent app" pairing. It's a single
@@ -48,7 +48,7 @@ struct OnboardingView: View {
     private var welcomeSection: some View {
         Section {
             VStack(alignment: .leading, spacing: 6) {
-                Text("Welcome to DriveTrack")
+                Text("Welcome to WheelHours")
                     .font(.title2.bold())
                 Text("No account, no sign-up. Just a few details to start tracking supervised driving hours.")
                     .font(.subheadline)
@@ -77,7 +77,7 @@ struct OnboardingView: View {
         } header: {
             Text("Target State")
         } footer: {
-            Text("Determines which DMV supervised-driving requirements DriveTrack tracks progress against.")
+            Text("Determines which DMV supervised-driving requirements WheelHours tracks progress against.")
         }
     }
 

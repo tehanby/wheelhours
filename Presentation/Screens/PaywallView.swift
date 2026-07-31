@@ -1,7 +1,7 @@
 import SwiftUI
 import StoreKit
 
-/// DriveTrack's monetization screen: presented (typically as a sheet) when a
+/// WheelHours's monetization screen: presented (typically as a sheet) when a
 /// free-tier gate blocks an action, e.g. the Dashboard's "log a drive" button
 /// or the Export screen's export button after
 /// `FreemiumGateService.canLogOrExportDrive` returns `false`.
@@ -67,7 +67,7 @@ struct PaywallView: View {
             Image(systemName: "steeringwheel")
                 .font(.system(size: 44))
                 .foregroundStyle(.tint)
-            Text("Unlock DriveTrack Lifetime")
+            Text("Unlock WheelHours Lifetime")
                 .font(.title2.bold())
                 .multilineTextAlignment(.center)
             Text("One purchase. Everything, forever. No subscription, no account required.")
@@ -131,7 +131,7 @@ struct PaywallView: View {
                     if isPurchasing {
                         ProgressView()
                     } else {
-                        Text("Unlock DriveTrack Lifetime — \(displayPrice)")
+                        Text("Unlock WheelHours Lifetime — \(displayPrice)")
                     }
                 }
                 .frame(maxWidth: .infinity)

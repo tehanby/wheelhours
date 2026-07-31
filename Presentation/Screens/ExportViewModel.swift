@@ -148,7 +148,7 @@ final class ExportViewModel: ObservableObject {
     /// Prefix shared by every temp PDF this service writes (see
     /// `writePDFToTempFile`), used both to name new files and to recognize old
     /// ones for cleanup (`deleteTempFile`/`purgeStaleTempFiles`).
-    static let tempFilePrefix = "DriveTrack-"
+    static let tempFilePrefix = "WheelHours-"
 
     /// Deletes a single exported PDF from the temp directory once the caller is
     /// done with it (e.g. the share sheet was dismissed). A DMV log PDF contains
