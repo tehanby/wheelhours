@@ -1,1 +1,2 @@
-Flask==2.0.1
+Flask==2.2.2
+chart.js==3.5.1
