@@ -1,11 +1,6 @@
 from flask import Flask, request, jsonify
-from werkzeug.middleware.profiler import ProfilerMiddleware
 
 app = Flask(__name__)
-
-@app.route('/')
-def home():
-    return "Welcome to the WheelHours portal!"
 
 @app.route('/data', methods=['GET'])
 def get_data():
