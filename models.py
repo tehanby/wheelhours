@@ -1,8 +1,21 @@
-from django.db import models
+from flask_sqlalchemy import SQLAlchemy
+from werkzeug.security import generate_password_hash, check_password_hash
 
-class Supervisor(models.Model):
-    name = models.CharField(max_length=100)
-    email = models.EmailField(unique=True)
+db = SQLAlchemy()
 
-    def __str__(self):
-        return self.name
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(64), index=True, unique=True)
+    email = db.Column(db.String(120), index=True, unique=True)
+    password_hash = db.Column(db.String(128))
+
+    def set_password(self, password):
+        self.password_hash = generate_password_hash(password)
+
+    def check_password(self, password):
+        return check_password_hash(self.password_hash, password)
+
+class Token(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    token = db.Column(db.String(256), index=True, unique=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
