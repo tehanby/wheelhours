@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Onboarding - Step {{ step.step_id }}</title>
+</head>
+<body>
+    <h1>{{ step.title }}</h1>
+    <p>{{ step.description }}</p>
+    {% if current_step_id != 1 %}
+        <a href="{{ url_for('.onboarding', step=current_step_id - 1) }}">Previous Step</a> |
+    {% endif %}
+    {% if current_step_id != steps_count %}
+        <a href="{{ url_for('.onboarding', step=current_step_id + 1) }}">Next Step</a>
+    {% endif %}
+    
+    {% if current_step_id == steps_count %}
+        <form method="post">
+            <button type="submit" name="mark_complete">Complete Onboarding</button>
+        </form>
+    {% else %}
+        <form method="post">
+            <button type="submit" name="mark_complete">Mark Step as Complete</button>
+        </form>
+    {% endif %}
+</body>
+</html>
