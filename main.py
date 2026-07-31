@@ -1,12 +1,11 @@
-from ui.supervisor_ui import root
+from kivy.app import App
+from kivy.uix.screenmanager import ScreenManager, Screen
 
-def on_first_open():
-    if not supervisor_exists():
-        root.mainloop()
+class DesignRevampApp(App):
+    def build(self):
+        sm = ScreenManager()
+        sm.add_widget(DesignRevampScreen(name='design_revamp'))
+        return sm
 
-def supervisor_exists():
-    # Logic to check if supervisor data already exists (e.g., file or database)
-    return False
-
-if __name__ == "__main__":
-    on_first_open()
+if __name__ == '__main__':
+    DesignRevampApp().run()
