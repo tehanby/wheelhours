@@ -18,7 +18,18 @@
 		3B2349D7301C1C3700BD3337 /* LocationTrackingServiceMathTests.cs in Resources */ = {isa = PBXBuildFile; fileRef = 3B234994301C1C3700BD3337 /* LocationTrackingServiceMathTests.cs */; };
 		3B2349D8301C1C3700BD3337 /* QueryOptimizer.py in Resources */ = {isa = PBXBuildFile; fileRef = 3B234996301C1C3700BD3337 /* QueryOptimizer.py */; };
 		3B2349D9301C1C3700BD3337 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3B234997301C1C3700BD3337 /* README.md */; };
+		3B234A87301C277800BD3337 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B234A83301C245700BD3337 /* XCTest.framework */; platformFilter = ios; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B234A7B301C237C00BD3337 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B234928301C181000BD3337 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B23492F301C181000BD3337;
+			remoteInfo = WheelHours;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3B234930301C181000BD3337 /* WheelHours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheelHours.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,6 +44,9 @@
 		3B234995301C1C3700BD3337 /* MainActivity.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = MainActivity.java; sourceTree = "<group>"; };
 		3B234996301C1C3700BD3337 /* QueryOptimizer.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = QueryOptimizer.py; sourceTree = "<group>"; };
 		3B234997301C1C3700BD3337 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3B234A77301C237C00BD3337 /* WheelHoursTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WheelHoursTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B234A83301C245700BD3337 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3BB2EE63301C292C00E27423 /* WheelHours-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "WheelHours-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -66,7 +80,6 @@
 				Models/StateDMVPreset.swift,
 				Models/Supervisor.swift,
 				Models/Vehicle.swift,
-				Services/.gitkeep,
 				Services/ActiveDriveRecoveryService.swift,
 				Services/FreemiumGateService.swift,
 				Services/LocationTrackingService.swift,
@@ -109,11 +122,9 @@
 		3B234A6D301C1FA800BD3337 /* Exceptions for "Presentation" folder in "WheelHours" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Components/.gitkeep,
 				Components/MultiSelectTagView.swift,
 				Components/ProgressRingView.swift,
 				Components/SignatureCaptureView.swift,
-				Screens/.gitkeep,
 				Screens/DashboardView.swift,
 				Screens/DashboardViewModel.swift,
 				Screens/ExportView.swift,
@@ -130,7 +141,6 @@
 		3B234A6E301C1FA800BD3337 /* Exceptions for "Resources" folder in "WheelHours" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				.gitkeep,
 				DriveTrack.storekit,
 			);
 			target = 3B23492F301C181000BD3337 /* WheelHours */;
@@ -139,19 +149,6 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Command.cs,
-			);
-			target = 3B23492F301C181000BD3337 /* WheelHours */;
-		};
-		3B234A70301C1FA800BD3337 /* Exceptions for "Tests" folder in "WheelHours" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				DriveTrackTests/.gitkeep,
-				DriveTrackTests/ActiveDriveRecoveryServiceTests.swift,
-				DriveTrackTests/FreemiumGateServiceTests.swift,
-				DriveTrackTests/PDFExportServiceTests.swift,
-				DriveTrackTests/StateDMVPresetEngineTests.swift,
-				DriveTrackTests/TimeCalculationServiceTests.swift,
-				UnitTests/ExportViewModelTests.cs,
 			);
 			target = 3B23492F301C181000BD3337 /* WheelHours */;
 		};
@@ -180,11 +177,6 @@
 				3B234A66301C1FA800BD3337 /* Exceptions for "api" folder in "WheelHours" target */,
 			);
 			path = api;
-			sourceTree = "<group>";
-		};
-		3B2349DD301C1FA800BD3337 /* App */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = App;
 			sourceTree = "<group>";
 		};
 		3B2349DF301C1FA800BD3337 /* Controllers */ = {
@@ -259,14 +251,6 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		3B234A24301C1FA800BD3337 /* Tests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				3B234A70301C1FA800BD3337 /* Exceptions for "Tests" folder in "WheelHours" target */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
 		3B234A27301C1FA800BD3337 /* ViewModels */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -283,6 +267,11 @@
 			path = views;
 			sourceTree = "<group>";
 		};
+		3B234A78301C237C00BD3337 /* WheelHoursTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = WheelHoursTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,15 +282,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3B234A74301C237C00BD3337 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B234A87301C277800BD3337 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		3B234927301C181000BD3337 = {
 			isa = PBXGroup;
 			children = (
+				3BB2EE63301C292C00E27423 /* WheelHours-Info.plist */,
+				3B234A78301C237C00BD3337 /* WheelHoursTests */,
 				3B234931301C181000BD3337 /* Products */,
 				3B2349DB301C1FA800BD3337 /* api */,
-				3B2349DD301C1FA800BD3337 /* App */,
 				3B2349DF301C1FA800BD3337 /* Controllers */,
 				3B2349E1301C1FA800BD3337 /* Data */,
 				3B2349F3301C1FA800BD3337 /* Domain */,
@@ -311,7 +309,6 @@
 				3B234A15301C1FA800BD3337 /* Presentation */,
 				3B234A18301C1FA800BD3337 /* Resources */,
 				3B234A1A301C1FA800BD3337 /* Services */,
-				3B234A24301C1FA800BD3337 /* Tests */,
 				3B234A27301C1FA800BD3337 /* ViewModels */,
 				3B234A2B301C1FA800BD3337 /* views */,
 				3B234937301C181200BD3337 /* Assets.xcassets */,
@@ -325,6 +322,7 @@
 				3B234996301C1C3700BD3337 /* QueryOptimizer.py */,
 				3B234997301C1C3700BD3337 /* README.md */,
 				3B234933301C181000BD3337 /* WheelHoursApp.swift */,
+				3B234A82301C245600BD3337 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -332,8 +330,17 @@
 			isa = PBXGroup;
 			children = (
 				3B234930301C181000BD3337 /* WheelHours.app */,
+				3B234A77301C237C00BD3337 /* WheelHoursTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		3B234A82301C245600BD3337 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B234A83301C245700BD3337 /* XCTest.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,15 +358,35 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				3B2349DD301C1FA800BD3337 /* App */,
-			);
 			name = WheelHours;
 			packageProductDependencies = (
 			);
 			productName = WheelHours;
 			productReference = 3B234930301C181000BD3337 /* WheelHours.app */;
 			productType = "com.apple.product-type.application";
+		};
+		3B234A76301C237C00BD3337 /* WheelHoursTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B234A7D301C237C00BD3337 /* Build configuration list for PBXNativeTarget "WheelHoursTests" */;
+			buildPhases = (
+				3B234A73301C237C00BD3337 /* Sources */,
+				3B234A74301C237C00BD3337 /* Frameworks */,
+				3B234A75301C237C00BD3337 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B234A7C301C237C00BD3337 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				3B234A78301C237C00BD3337 /* WheelHoursTests */,
+			);
+			name = WheelHoursTests;
+			packageProductDependencies = (
+			);
+			productName = WheelHoursTests;
+			productReference = 3B234A77301C237C00BD3337 /* WheelHoursTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -373,6 +400,10 @@
 				TargetAttributes = {
 					3B23492F301C181000BD3337 = {
 						CreatedOnToolsVersion = 26.3;
+					};
+					3B234A76301C237C00BD3337 = {
+						CreatedOnToolsVersion = 26.3;
+						TestTargetID = 3B23492F301C181000BD3337;
 					};
 				};
 			};
@@ -391,6 +422,7 @@
 			projectRoot = "";
 			targets = (
 				3B23492F301C181000BD3337 /* WheelHours */,
+				3B234A76301C237C00BD3337 /* WheelHoursTests */,
 			);
 		};
 /* End PBXProject section */
@@ -410,6 +442,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3B234A75301C237C00BD3337 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -424,7 +463,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3B234A73301C237C00BD3337 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B234A7C301C237C00BD3337 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B23492F301C181000BD3337 /* WheelHours */;
+			targetProxy = 3B234A7B301C237C00BD3337 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3B234939301C181200BD3337 /* Debug */ = {
@@ -558,6 +612,7 @@
 				DEVELOPMENT_TEAM = 2HY6LBD2R2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WheelHours-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -590,6 +645,7 @@
 				DEVELOPMENT_TEAM = 2HY6LBD2R2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WheelHours-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -612,6 +668,48 @@
 			};
 			name = Release;
 		};
+		3B234A7E301C237C00BD3337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2HY6LBD2R2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hanbyinc.WheelHoursTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WheelHours.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WheelHours";
+			};
+			name = Debug;
+		};
+		3B234A7F301C237C00BD3337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2HY6LBD2R2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hanbyinc.WheelHoursTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WheelHours.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WheelHours";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -629,6 +727,15 @@
 			buildConfigurations = (
 				3B23493C301C181200BD3337 /* Debug */,
 				3B23493D301C181200BD3337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B234A7D301C237C00BD3337 /* Build configuration list for PBXNativeTarget "WheelHoursTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B234A7E301C237C00BD3337 /* Debug */,
+				3B234A7F301C237C00BD3337 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

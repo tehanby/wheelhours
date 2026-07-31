@@ -24,6 +24,9 @@ import SwiftData
 /// Vehicle/supervisor selection for a live drive is out of scope for this
 /// screen (`startDrive`/`endDrive` are called with `nil` for both); assigning
 /// those is expected to happen via the edit screen after the drive is logged.
+///
+/// `@MainActor` because `DashboardViewModel.init()` is main actor-isolated.
+@MainActor
 struct DashboardView: View {
     @Environment(\.modelContext) private var modelContext
 
@@ -43,14 +46,17 @@ struct DashboardView: View {
     private var driverProfile: DriverProfile? { driverProfiles.first }
 
     /// - Parameters:
+    ///   - viewModel: The view model for this dashboard. Caller is responsible
+    ///     for creating it (since `DashboardViewModel.init()` is main actor-isolated).
     ///   - availableSupervisors / availableVehicles: Choices offered to the "new
     ///     manual entry" sheet's supervisor/vehicle chip pickers (see
     ///     `ManualLogView`). The caller supplies these (e.g. from its own
     ///     `@Query`) so this view never needs its own SwiftData query for
     ///     reference data. Defaults to `[]`, which still renders correctly
     ///     (`ManualLogView` shows "No supervisors/vehicles added yet.").
+    @MainActor
     init(
-        viewModel: DashboardViewModel = DashboardViewModel(),
+        viewModel: DashboardViewModel,
         availableSupervisors: [Supervisor] = [],
         availableVehicles: [Vehicle] = [],
         onEditDriveLog: @escaping (DriveLog) -> Void = { _ in }
@@ -319,6 +325,8 @@ private struct DriveLogRow: View {
 }
 
 #Preview {
-    DashboardView()
+    @Previewable @State var viewModel = DashboardViewModel()
+    
+    DashboardView(viewModel: viewModel)
         .modelContainer(for: [DriverProfile.self, Supervisor.self, Vehicle.self, DriveLog.self], inMemory: true)
 }

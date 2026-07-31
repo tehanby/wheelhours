@@ -1,5 +1,5 @@
 import XCTest
-@testable import DriveTrack
+@testable import WheelHours
 
 final class StateDMVPresetEngineTests: XCTestCase {
 
@@ -187,7 +187,7 @@ final class StateDMVPresetEngineTests: XCTestCase {
 
         XCTAssertEqual(progress.weatherRequiredMinutes, 5 * 60)
         XCTAssertEqual(progress.weatherCompletedMinutes, 60 + 45 + 30)
-        XCTAssertEqual(progress.weatherPercent, Double(60 + 45 + 30) / Double(5 * 60), accuracy: 0.0001)
+        XCTAssertEqual(progress.weatherPercent ?? 0.0, Double(60 + 45 + 30) / Double(5 * 60), accuracy: 0.0001)
 
         // Sanity: total minutes should include every log regardless of condition.
         XCTAssertEqual(progress.totalCompletedMinutes, 120 + 60 + 45 + 30)
@@ -201,7 +201,7 @@ final class StateDMVPresetEngineTests: XCTestCase {
 
         XCTAssertEqual(progress.weatherCompletedMinutes, 90)
         XCTAssertEqual(progress.weatherRequiredMinutes, 300)
-        XCTAssertEqual(progress.weatherPercent, 90.0 / 300.0, accuracy: 0.0001)
+        XCTAssertEqual(progress.weatherPercent!, 90.0 / 300.0, accuracy: 0.0001)
         XCTAssertLessThan(progress.weatherPercent ?? 1.0, 1.0)
     }
 }

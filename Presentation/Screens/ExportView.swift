@@ -53,17 +53,16 @@ struct ExportView: View {
     ///   - modelContext: The SwiftData context to save captured signatures into.
     ///     Pass the same context the rest of the app uses (e.g. `\.modelContext`
     ///     read by the parent).
-    ///   - storeKitService: The app's shared `StoreKitService` instance. Defaults
-    ///     to a fresh instance for previews/standalone use, but production call
-    ///     sites should pass a single instance owned higher up (e.g. at the app
-    ///     root) rather than relying on the default, since each `StoreKitService`
-    ///     starts its own long-running `Transaction.updates` listener.
+    ///   - storeKitService: The app's shared `StoreKitService` instance. Production
+    ///     call sites should pass a single instance owned higher up (e.g. at the app
+    ///     root), since each `StoreKitService` starts its own long-running
+    ///     `Transaction.updates` listener.
     ///   - freemiumGateService: The free-tier gating rule. Defaults to the
     ///     standard 5-free-drives configuration.
     init(
         driverProfile: DriverProfile,
         modelContext: ModelContext,
-        storeKitService: StoreKitService = StoreKitService(),
+        storeKitService: StoreKitService,
         freemiumGateService: FreemiumGateService = FreemiumGateService()
     ) {
         _viewModel = StateObject(wrappedValue: ExportViewModel(

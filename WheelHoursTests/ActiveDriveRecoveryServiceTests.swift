@@ -1,3 +1,4 @@
+import CoreLocation
 import XCTest
 import CoreLocation
 @testable import WheelHours

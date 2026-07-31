@@ -58,15 +58,15 @@ final class DashboardViewModel {
     }
 
     init(
-        locationTrackingService: LocationTrackingService = LocationTrackingService(),
-        activeDriveRecoveryService: ActiveDriveRecoveryService = ActiveDriveRecoveryService(),
-        storeKitService: StoreKitService = StoreKitService(),
-        freemiumGateService: FreemiumGateService = FreemiumGateService()
+        locationTrackingService: LocationTrackingService? = nil,
+        activeDriveRecoveryService: ActiveDriveRecoveryService? = nil,
+        storeKitService: StoreKitService? = nil,
+        freemiumGateService: FreemiumGateService? = nil
     ) {
-        self.locationTrackingService = locationTrackingService
-        self.activeDriveRecoveryService = activeDriveRecoveryService
-        self.storeKitService = storeKitService
-        self.freemiumGateService = freemiumGateService
+        self.locationTrackingService = locationTrackingService ?? LocationTrackingService()
+        self.activeDriveRecoveryService = activeDriveRecoveryService ?? ActiveDriveRecoveryService()
+        self.storeKitService = storeKitService ?? StoreKitService()
+        self.freemiumGateService = freemiumGateService ?? FreemiumGateService()
     }
 
     // MARK: - DMV progress

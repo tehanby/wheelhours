@@ -1,5 +1,6 @@
 import XCTest
-@testable import DriveTrack
+import XCTest
+@testable import WheelHours
 
 final class TimeCalculationServiceTests: XCTestCase {
 
