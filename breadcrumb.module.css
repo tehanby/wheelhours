@@ -1,0 +1,25 @@
+.breadcrumb {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb-item {
+  margin-right: .5rem;
+}
+
+.breadcrumb-item:last-child {
+  color: #6c757d;
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+  color: #0275d8;
+  transition: color .15s ease-in-out;
+}
+
+.breadcrumb-item a:hover,
+.breadcrumb-item a:focus {
+  color: #014777;
+}
