@@ -1,0 +1,17 @@
+# Ignore all files except those explicitly listed below
+*
+!/.gitignore
+
+# Ignore Python virtual environments
+__pycache__/
+*.venv/
+
+# Ignore build artifacts and temporary files
+build/
+dist/
+*.log
+*.tmp
+
+# Ignore IDE-specific configuration files
+.idea/
+.vscode/
