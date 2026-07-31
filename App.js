@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
-import Breadcrumb from './components/Breadcrumb';
+import React from 'react';
+import Breadcrumb from './breadcrumb';
 
 const App = () => {
-    const [paths, setPaths] = useState(['Home', 'Services', 'Consulting']);
+  const breadcrumbItems = [
+    { label: 'Home', isLink: true, href: '/' },
+    { label: 'Services' },
+    { label: 'Web Development' }
+  ];
 
-    return (
-        <div className="App">
-            <Breadcrumb paths={paths} />
-            {/* Rest of your app content */}
-        </div>
-    );
+  return (
+    <div className="App">
+      <h1>Breadcrumb Example</h1>
+      <Breadcrumb items={breadcrumbItems} />
+    </div>
+  );
 };
 
 export default App;
