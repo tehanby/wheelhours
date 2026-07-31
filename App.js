@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
-import Breadcrumb from './components/Breadcrumb';
+import React from 'react';
+import UserProfile from './components/UserProfile';
 
 const App = () => {
-    const [paths, setPaths] = useState(['Home', 'Services', 'Consulting']);
+  const user = {
+    username: 'JohnDoe',
+    email: 'john.doe@example.com',
+  };
 
-    return (
-        <div className="App">
-            <Breadcrumb paths={paths} />
-            {/* Rest of your app content */}
-        </div>
-    );
+  return (
+    <div>
+      <UserProfile user={user} />
+    </div>
+  );
 };
 
 export default App;
