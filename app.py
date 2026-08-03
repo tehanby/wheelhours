@@ -1,26 +1,65 @@
 import os
-from flask import Flask, request, jsonify
+from datetime import datetime
 
-app = Flask(__name__)
+class App:
+    def __init__(self):
+        self.onboarded = self.check_onboarding_status()
 
-# Define a dictionary to store vehicle data temporarily
-vehicle_data_store = {}
+    def check_onboarding_status(self):
+        onboard_file_path = 'C:\\AI_Workspace\\wheelhours\\.onboarded'
+        if not os.path.exists(onboard_file_path):
+            return False
+        with open(onboard_file_path, 'r') as file:
+            last_access_time = datetime.fromisoformat(file.read().strip())
+            current_time = datetime.now()
+            time_difference = (current_time - last_access_time).days
+            return time_difference < 7
 
-@app.route('/add_vehicle', methods=['POST'])
-def add_vehicle():
-    # Retrieve the vehicle data from the request
-    vehicle_info = request.json
-    
-    # Validate the vehicle data (example validation)
-    if 'make' not in vehicle_info or 'model' not in vehicle_info:
-        return jsonify({"error": "Make and model are required"}), 400
-    
-    # Store the vehicle data in the dictionary (simulating storage)
-    vehicle_id = len(vehicle_data_store) + 1
-    vehicle_data_store[vehicle_id] = vehicle_info
-    
-    # Return a success response with the stored vehicle data
-    return jsonify({"message": "Vehicle added successfully", "vehicle_id": vehicle_id, "vehicle": vehicle_info}), 200
+    def run(self):
+        if not self.onboarded:
+            self.show_onboarding()
+        else:
+            self.main_menu()
 
-if __name__ == '__main__':
-    app.run(debug=True)
+    def show_onboarding(self):
+        print("Welcome to WheelHours!")
+        print("Before we get started, let's set up your account.")
+        self.add_supervisor()
+        self.add_vehicle()
+        with open('C:\\AI_Workspace\\wheelhours\\.onboarded', 'w') as file:
+            file.write(datetime.now().isoformat())
+
+    def add_supervisor(self):
+        supervisor_name = input("Please enter the name of your supervisor: ")
+        print(f"Supervisor {supervisor_name} added successfully.")
+
+    def add_vehicle(self):
+        vehicle_model = input("Please enter the model of your vehicle: ")
+        print(f"Vehicle {vehicle_model} added successfully.")
+
+    def main_menu(self):
+        while True:
+            print("\nMain Menu")
+            print("1. View Work Hours")
+            print("2. Edit Vehicle")
+            print("3. Exit")
+            choice = input("Select an option: ")
+            if choice == '1':
+                self.view_work_hours()
+            elif choice == '2':
+                self.edit_vehicle()
+            elif choice == '3':
+                break
+            else:
+                print("Invalid option. Please try again.")
+
+    def view_work_hours(self):
+        print("Work hours will be displayed here.")
+
+    def edit_vehicle(self):
+        vehicle_model = input("Enter the model of the vehicle you want to edit: ")
+        # Add logic to edit the vehicle details
+
+if __name__ == "__main__":
+    app = App()
+    app.run()
